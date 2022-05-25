@@ -76,7 +76,7 @@ sr.reveal(`.c-level-2-about-data, .swiper-container`, {
     interval: 200,
 })
 
-sr.reveal(`.c-level-3-home-icon, .c-level-3-home-data, .c-level-1-contacto`, {
+sr.reveal(`.c-level-3-home-icon, .c-level-3-home-data, .c-level-2-contacto-informacion, .c-level-2-contacto-formulario`, {
     origin: 'left',
     interval: 200,
 })
