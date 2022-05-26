@@ -112,9 +112,7 @@ section {
 }
 
 .c-level-5-nav{
-    text-transform: uppercase;
     font-size: var(--font-size-normal);
-    font-weight: var(--font-weight-semibold);
     color: var(--color-text);
 }
 
@@ -165,7 +163,7 @@ section {
 }
 
 .c-level-3-home-img{
-    width: 215px;
+    width: 180px;
     justify-self: center;
 }
 
@@ -217,8 +215,8 @@ section {
 
 .c-level-2-about-img{
     justify-self: center;
-    width: 180px;
-    border-radius: 20px;
+    width: 250px;
+    border-radius: 10px;
     margin: var(--mg-1) 0;
 }
 
@@ -307,7 +305,7 @@ section {
 }
 
 .c-level-3-portafolio-img{
-    width: 280px;
+    width: 250px;
     justify-self: center;
     margin: var(--mg-1) 0;
     border-radius: 10px;
@@ -327,6 +325,24 @@ section {
     color: var(--color-text);
 }
 
+.swiper-button-prev::after, 
+.swiper-button-next::after{
+    content: '';
+}
+  
+.swiper-portafolio-icon{
+    font-size: 1.5rem;
+    color: var(--color-first);
+}
+  
+.swiper-button-prev{
+    left: -0.1rem;
+}
+  
+.swiper-button-next{
+    right: -0.1rem;
+}
+  
 .swiper-container-horizontal > .swiper-pagination-bullets{
     bottom: -.1rem;
 }
@@ -415,25 +431,8 @@ section {
     visibility: visible;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =============== MEDIA QUERY FOR MOBILE ================= */
-@media screen and (max-width: 768px){
+/* =============== MEDIA QUERY ================= */
+@media screen and (max-width: 949px){
     .c-level-3-nav-nav{
       position: fixed;
       top: -100%;
@@ -448,16 +447,60 @@ section {
       border-radius: 2rem;
       z-index: var(--z-fixed);
     }
-
     .c-show-menu{
         top: 60px;
     }
 }
+ 
+@media screen and (min-width: 768px){
+    .c-level-2-nav{
+    
+        padding: 0 4rem;
+    }
+    main{
+        margin: 0 4rem;
+    }
+    
+    .c-level-2-home{
+        grid-template-columns: max-content 1fr 1fr;
+    }
+    
+    .c-level-3-home-data{
+        grid-column: initial;
+    }
+    
+    .c-level-3-home-img{
+        width: 80%;
+        order: 1;
+        justify-self: center;
+    }
 
+    .c-level-1-about, .c-level-2-portafolio{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
 
-/* @media screen and (min-width: 769px){
+    .c-level-2-about-img{
+        width: 100%;
+    }
 
-  
+    .c-level-3-portafolio-img{
+        width: 90%;
+        order: 1;
+        justify-self: center; 
+    }
+
+    .c-level-3-portafolio-data{
+        padding-left: 2rem;
+    }
+
+    .c-level-1-contacto{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media screen and (min-width: 950px){
     .c-level-3-nav-nav{
       display: flex;
       align-items: center;
@@ -465,6 +508,23 @@ section {
 
     .c-level-3-nav-toggle{
         display: none;
+    } 
+
+    .c-level-1-nav{
+        height: 70px;
     }
     
-} */
+    .c-level-2-nav{
+        height: 70px;
+        padding: 0 6rem;
+    }
+
+    main{
+        margin: 0 6rem;
+    }
+
+    section{
+        padding: 4rem 0;
+    }
+   
+}

@@ -24,7 +24,7 @@ function scrollActive(){
     const scrollY = window.pageYOffset
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 70;
+        const sectionTop = current.offsetTop - 90;
         sectionId = current.getAttribute('id')
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
             document.querySelector('.c-level-3-nav-nav a[href*=' + sectionId + ']').classList.add('c-active-link')
@@ -53,6 +53,11 @@ window.addEventListener('scroll', scrollTop)
 /*==================== SWIPER PORTAFOLIO ====================*/ 
 let swiper = new Swiper('.swiper-container', {
     cssMode: true,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -66,17 +71,17 @@ const sr = ScrollReveal({
     reset: true,
 });
 
-sr.reveal(`.c-level-3-home-img, .c-level-2-about-img, .c-boton-inicio, .c-level-2-services-card`, {
+sr.reveal(`.c-level-3-home-img, .c-level-2-about-img, .c-level-2-services-card`, {
     origin: 'top',
     interval: 200,
 })
 
-sr.reveal(`.c-level-2-about-data, .swiper-container`, {
+sr.reveal(`.c-level-2-about-data, .swiper-wrapper, .c-level-2-contacto-formulario`, {
     origin: 'right',
     interval: 200,
 })
 
-sr.reveal(`.c-level-3-home-icon, .c-level-3-home-data, .c-level-2-contacto-informacion, .c-level-2-contacto-formulario`, {
+sr.reveal(`.c-level-3-home-icon, .c-level-3-home-data, .c-level-2-contacto-informacion`, {
     origin: 'left',
     interval: 200,
 })
